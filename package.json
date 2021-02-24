@@ -27,8 +27,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "build-apk": "react-scripts build; npx cap add android; npx cap sync android; cd android; gradlew assembleRelease"
   },
   "eslintConfig": {
     "extends": "react-app"
